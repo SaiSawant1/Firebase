@@ -41,7 +41,7 @@ const Login = () => {
                 <Form.Label>Password</Form.Label>
                 <Form.Control type="password" ref={passwordRef} required />
               </Form.Group>
-              <Button disabled={loading} type="submit" onClick={handleSubmit} className="w-100">
+              <Button  disabled={loading} type="submit" onClick={handleSubmit} className="w-100 mt-3">
                 Login in
               </Button>
             </Form>
