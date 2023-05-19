@@ -5,7 +5,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Dashboard from "./components/Dashboard";
 import Login from "./components/Login";
 import PrivateRoute from "./components/PrivateRoute";
-import { UpdateProfile } from "./components/UpdateProfile";
+import  UpdateProfile  from "./components/UpdateProfile";
+import PasswordRest from "./components/PasswordRest";
 function App() {
   return (
     <BrowserRouter>
@@ -17,7 +18,8 @@ function App() {
           <AuthProvider>
             <Routes>
               <Route path="/" element={<PrivateRoute><Dashboard /></PrivateRoute>} />
-              <Route path="/update" element={<PrivateRoute><UpdateProfile /></PrivateRoute>} />
+              <Route path="/update-profile" element={<PrivateRoute><UpdateProfile /></PrivateRoute>} />
+              <Route path="/reset" element={<PasswordRest/>} />
               <Route path="/signup" element={<Signup/>} />
               <Route path="/login" element={<Login/>} />
             </Routes>
